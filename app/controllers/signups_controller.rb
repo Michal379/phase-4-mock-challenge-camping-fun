@@ -20,6 +20,6 @@ class SignupsController < ApplicationController
       
       private
   def signup_params
-    params.permit(:title, :camper_id, :activity_id) # Add the required parameters
-  end
+    params.permit(:time, :camper_id, :activity_id)
+end
 end
