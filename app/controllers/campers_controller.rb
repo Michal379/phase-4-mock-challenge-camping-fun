@@ -20,7 +20,7 @@ class CampersController < ApplicationController
     def create
         camper = Camper.new(camper_params)
         if camper.save
-            render json: camper.to_json(except: [:created_at, :updated_at])
+            render json: camper.to_json(except: [:created_at, :updated_at]), status: :created
           else
             render json: { errors: camper.errors.full_messages }, status: :unprocessable_entity
           end
