@@ -15,7 +15,8 @@ class CampersController < ApplicationController
             }
           else
             render json: { error: "Camper not found" }, status: :not_found
-          end    end 
+          end    
+        end 
 
     def create
         camper = Camper.new(camper_params)
